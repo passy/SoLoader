@@ -15,4 +15,4 @@ jobs:
         with:
           commands: 'buck fetch //...; buck build :soloader'
         env:
-          ANDROID_HOME: ${{ $ANDROID_SDK_ROOT }}
+          ANDROID_HOME: ${{ env.ANDROID_SDK_ROOT }}
