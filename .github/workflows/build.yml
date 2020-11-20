@@ -16,4 +16,4 @@ jobs:
         with:
           commands: 'buck fetch //...; buck build :soloader'
         env:
-          ANDROID_HOME: '.android/sdk'
+          ANDROID_HOME: "$HOME/.android/sdk"
