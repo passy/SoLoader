@@ -9,6 +9,4 @@ jobs:
       - name: Buck build
         uses: GuilleDF/buckaroo-action@v1.0.3
         with:
-          commands: |
-            buck fetch //...
-            buck build :soloader
+          commands: 'buck fetch //...; buck build :soloader'
