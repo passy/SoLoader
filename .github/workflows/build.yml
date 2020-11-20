@@ -9,8 +9,8 @@ jobs:
       - name: Setup Android SDK
         uses: android-actions/setup-android@v2
       - run: |
-        ls /github/workspace/$HOME/.android/
-        ls /github/workspace/$HOME/.android/sdk
+          ls /github/workspace/$HOME/.android/
+          ls /github/workspace/$HOME/.android/sdk
       - name: Buck build
         uses: GuilleDF/buckaroo-action@v1.0.3
         with:
