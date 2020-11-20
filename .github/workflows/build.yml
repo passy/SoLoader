@@ -4,8 +4,6 @@ on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
-    env:
-      ANDROID_HOME: '$HOME/.android/sdk'
     steps:
       - uses: actions/checkout@v2
       - name: Setup Android SDK
@@ -14,3 +12,5 @@ jobs:
         uses: GuilleDF/buckaroo-action@v1.0.3
         with:
           commands: 'buck fetch //...; buck build :soloader'
+        env:
+          ANDROID_HOME: '$HOME/.android/sdk'
