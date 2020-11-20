@@ -6,6 +6,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - name: Setup Android SDK
+        uses: android-actions/setup-android@v2
       - name: Buck build
         uses: GuilleDF/buckaroo-action@v1.0.3
         with:
