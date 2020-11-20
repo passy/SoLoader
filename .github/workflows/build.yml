@@ -9,11 +9,10 @@ jobs:
       - name: Setup Android SDK
         uses: android-actions/setup-android@v2
       - run: |
-          ls $HOME/.android/
-          ls $HOME/.android/sdk
+          ls $ANDROID_SDK_ROOT
       - name: Buck build
         uses: GuilleDF/buckaroo-action@v1.0.3
         with:
           commands: 'buck fetch //...; buck build :soloader'
         env:
-          ANDROID_HOME: "$HOME/.android/sdk"
+          ANDROID_HOME: "$ANDROID_SDK_ROOT"
