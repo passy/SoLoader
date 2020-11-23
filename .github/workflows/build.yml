@@ -14,6 +14,6 @@ jobs:
       - name: Buck build
         uses: passy/run-buck@main
         with:
-          commands: '/opt/android-sdk-linux/tools/bin/sdkmanager "build-tools;27.0.3"; buck fetch //...; buck build :soloader'
+          commands: '/opt/android-sdk-linux/tools/bin/sdkmanager "build-tools;27.0.3" "platforms;android-26" > /dev/null; buck fetch //...; buck build :soloader'
         env:
           ANDROID_HOME: ${{ env.ANDROID_SDK_ROOT }}
